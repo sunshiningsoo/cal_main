@@ -14,12 +14,9 @@ class App extends React.Component {
   render() {
     const {isLoading} = this.state;
     return (
-      <section class="comtainer"> 
         <div class="button_here">
           <Buttons  />
-        </div>       
-      </section>
-      
+        </div> 
     )
   }
 

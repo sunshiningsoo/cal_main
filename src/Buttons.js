@@ -6,7 +6,6 @@ const Paints = document.querySelector(".paint")
 const SHOWING_ON = "showing";
 
 function showNum(num){
-    console.log(num);
     Paints.classList.add(SHOWING_ON);
     Paints.innerHTML = Paints.innerHTML+`${num}`;
 }
@@ -41,26 +40,54 @@ function clickNum9() {
 function clickNum0() {
     showNum(0);
 }
-
-
-
+function clickNumPlus() {
+    showNum("+");
+}
+function clickNumMinus() {
+    showNum("-");
+}
+function clickNumMul() {
+    showNum("*");
+}
+function clickNumDiv() {
+    showNum("/");
+}
+function clickResult(){
+    Paints.innerHTML = Paints.innerHTML + "=" + eval(Paints.innerHTML); 
+}
 function reset() {
     Paints.innerHTML = "";
 }
 
+
+
+
 function Buttons()  {
     return (
         <div>
+            <p>
             <button class="numberClick" onClick={clickNum1}>1</button>
             <button class="numberClick" onClick={clickNum2}>2</button>
             <button class="numberClick" onClick={clickNum3}>3</button>
+            </p>
+            <p>
             <button class="numberClick" onClick={clickNum4}>4</button>
             <button class="numberClick" onClick={clickNum5}>5</button>
             <button class="numberClick" onClick={clickNum6}>6</button>
+            </p>
+            <p>
             <button class="numberClick" onClick={clickNum7}>7</button>
             <button class="numberClick" onClick={clickNum8}>8</button>
             <button class="numberClick" onClick={clickNum9}>9</button>
+            </p>
+            <p>
             <button class="numberClick" onClick={clickNum0}>0</button>
+            </p>
+            <button class="operater" onClick={clickNumPlus}>+</button>
+            <button class="operater" onClick={clickNumMinus}>-</button>
+            <button class="operater" onClick={clickNumMul}>*</button>
+            <button class="operater" onClick={clickNumDiv}>/</button>
+            <button class="result" onClick={clickResult}>=</button>
             <button class="reset" onClick={reset}>reset</button>
         </div>
          

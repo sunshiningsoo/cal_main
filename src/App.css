@@ -1,3 +1,13 @@
 .showing {
     display:block;
 }
+
+.numberClick {
+    background-color: beige;
+    border: none;
+}
+
+.operater {
+    background-color: antiquewhite;
+    border: none;
+}
