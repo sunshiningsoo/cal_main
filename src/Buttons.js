@@ -47,6 +47,7 @@ function clickNum0() {
 function reset() {
     Paints.innerHTML = "";
 }
+
 function Buttons()  {
     return (
         <div>
