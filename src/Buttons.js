@@ -1,44 +1,53 @@
 import React from "react";
 import "./App.css";
+import Numberss from "./Numberss";
+
 
 const Paints = document.querySelector(".paint")
 
+
 const SHOWING_ON = "showing";
 
-function showNum(num){
-    Paints.classList.add(SHOWING_ON);
-    Paints.innerHTML = Paints.innerHTML+`${num}`;
-}
+const numbers = [{func: clickNum0, id:0}, 
+    {func: clickNum1, id:1}, 
+    {func: clickNum2, id:2}, 
+    {func: clickNum3, id:3}, 
+    {func: clickNum4, id:4}, 
+    {func: clickNum5, id:5},
+    {func: clickNum6, id:6},
+    {func: clickNum7, id:7},
+    {func: clickNum8, id:8},
+    {func: clickNum9, id:9}];
 
 function clickNum1() {
-    showNum(1);
+        showNum(1);
 }
 function clickNum2() {
-    showNum(2);
+        showNum(2);
 }
 function clickNum3() { 
-    showNum(3);
+        showNum(3);
 }
 function clickNum4() {
-    showNum(4);
+        showNum(4);
 }
 function clickNum5() {
-    showNum(5);
+        showNum(5);
 }
 function clickNum6() {
-    showNum(6);
+        showNum(6);
 }
 function clickNum7() {
-    showNum(7);
+        showNum(7);
 }
 function clickNum8() {
-    showNum(8);
+        showNum(8);
 }
 function clickNum9() {
-    showNum(9);
+        showNum(9);
 }
 function clickNum0() {
-    showNum(0);
+        showNum(0);
 }
 function clickNumPlus() {
     showNum("+");
@@ -57,6 +66,11 @@ function clickResult(){
 }
 function reset() {
     Paints.innerHTML = "";
+}
+
+function showNum(num){
+    Paints.classList.add(SHOWING_ON);
+    Paints.innerHTML += `${num}`;
 }
 
 
